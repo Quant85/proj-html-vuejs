@@ -32,18 +32,23 @@
           <div class="navbar_top_left">
             <label for=""></label>
             <select class="language" >
-              <option v-for="language in languageSelect">{{language}}</option>
+              <option v-for="language in languageSelect"><a :href="`${language.link}`">{{language.language}}</a></option>
             </select>
           </div>
           <!-- /.navbar_top_left -->
           <div class="navbar_top_right">
             <ul class="items_menu">
               <li class="navbar_items_menu" v-for="(items, index) in itemsMenu">
-                <a href="#" class="items_menu">{{items.title}}</a>
-                <a href="#" v-if="items.badge" class="items_badge">{{items.badgeTitle}}</a>
+                <a :href="`${items.link}`" class="items_menu">{{items.title}}</a>
+                <a :href="`${items.badgeTitle}`" v-if="items.badge" class="items_badge">{{items.badgeTitle}}</a>
               </li>
             </ul>
-
+            <ul class="navbar_social flex">
+              <li class="social_icon" v-for="(icon,index) in socialIcons">
+                <a :href="`${icon.link}`"><i :class="`fab ${icon.icon}`"></i></a>
+              </li>
+            </ul>
+            <!-- /.navbar_social -->
           </div>
           
         </nav>

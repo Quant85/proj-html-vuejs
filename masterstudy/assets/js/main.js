@@ -3,45 +3,105 @@
 let ms_app = new Vue({
   el:'#ms_app',
   data:{
-      languageSelect:["English","Deutsch","Italian"],
+      languageSelect:[
+        {
+          language:"English",
+          link:"#",
+        },
+        {
+          language:"Deutsch",
+          link:"#",
+        },
+        {
+          language:"Italian",
+          link:"#",
+        }
+      ],
       itemsMenu: [
         {
           badge:false,
+          badgeLink:"https://boolean.teachable.com/",
           badgeTitle:"new",
-          title:"Courses"
+          title:"Courses",
+          link:"https://boolean.teachable.com/"
         },
         {
           badge:true,
+          badgeLink:"https://boolean.teachable.com/",
           badgeTitle:"new",
-          title:"Zoom"
+          title:"Zoom",
+          link:"https://boolean.teachable.com/"
         },
         {
           badge:false,
+          badgeLink:"https://boolean.teachable.com/",
           badgeTitle:"new",
-          title:"Pages"
+          title:"Pages",
+          link:"https://boolean.teachable.com/"
         },
         {
           badge:false,
+          badgeLink:"https://boolean.teachable.com/",
           badgeTitle:"new",
-          title:"Bundles"
+          title:"Bundles",
+          link:"https://boolean.teachable.com/"
         },
         {
           badge:false,
+          badgeLink:"https://boolean.teachable.com/",
           badgeTitle:"new",
-          title:"Course Formats"
+          title:"Course Formats",
+          link:"https://boolean.teachable.com/"
         },
         {
           badge:true,
+          badgeLink:"https://boolean.teachable.com/",
           badgeTitle:"new",
-          title:"Add course"
+          title:"Add course",
+          link:"https://boolean.teachable.com/"
         },
         {
           badge:false,
+          badgeLink:"https://boolean.teachable.com/",
           badgeTitle:"new",
-          title:"Demos"
+          title:"Demos",
+          link:"https://boolean.teachable.com/"
         },
       ],
-      socialIcons:[]
+      socialIcons:[
+        {
+          icon:"fa-twitter",
+          link:"https://twitter.com/login?lang=it",
+        },
+        {
+          icon:"fa-instagram",
+          link:"https://www.instagram.com",
+        },
+        {
+          icon:"fa-behance",
+          link:"https://www.instagram.com",
+        },
+        {
+          icon:"fa-dribbble",
+          link:"https://dribbble.com/",
+        },
+        {
+          icon:"fa-flickr",
+          link:"https://dribbble.com/",
+        },
+        {
+          icon:"fa-git",
+          link:"https://github.com/Quant85",
+        },
+        {
+          icon:"fa-linkedin",
+          link:"https://www.linkedin.com/in/antonioquattrocchi/",
+        },
+        {
+          icon:"fa-pinterest",
+          link:"https://www.pinterest.it/",
+        }
+      ]
   }
 
 });

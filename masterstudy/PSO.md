@@ -147,8 +147,8 @@ Il Footer è suddiviso in 4 macro colonne contenenti a loro volta
 
 - **About** - in cui ci sono riferimenti sull'azienda e i riferimenti stilizzati sotto forma di icone, agli elementi social ad essa connessi
 - **Contact** - come contattare l'azienda. Indirizzo, telefono, fax, info-email
-- Page - collegamenti a varie arie d'interesse del sito
-- Blog - presenta una previw di due articoli presenti nel blog.
+- **Page** - collegamenti a varie arie d'interesse del sito
+- **Blog** - presenta una previw di due articoli presenti nel blog.
 
 ---
 ---
