@@ -6,9 +6,9 @@
 
   Riprodurre il layout proposto della page "Master Study" themes;
 
-### * Tecnologie da adottate:  HTML/CSS/VueJs
+### * Tecnologie adottate:  HTML/CSS/VueJs
 
-### * Specifiche richieste: Aggiungere Header e Footer con VueJs e reare una struttura dati che consenta di inserire i link nelle navbar
+### * Specifiche richieste: aggiungere Header e Footer con VueJs e creare una struttura dati che consenta di inserire i link nelle navbar
 
 ---
 ---
@@ -21,8 +21,8 @@ Individuazione delle macroaree di sviluppo:
   2. **Main**
   3. **Footer**
 
-Che successivamente andremo a suddividere nelle loro sezioni costituenti in base alla loro funzionalità.
-Simultaneamente si inizia a creare una prima bozza di organigramma strutturale dove allocare le risorse in cartelle.
+Successivamente le andremo a suddividere nelle loro sezioni costituenti in base alla loro funzionalità.
+Simultaneamente si inizia a creare una prima bozza di organigramma strutturale, dove allocare le risorse in cartelle.
 Project - "masterstudy"
 
 - index.html
@@ -33,30 +33,34 @@ Project - "masterstudy"
     - fontawesome - script per collegamento fontawesome
     - main.js
   - img - cartella risorse immagini suddivise per sottocartelle
-    - eader
+    - header
     - main
     - footer
 
 ---
 ---
 
-### 1.1 - Heade
+### 1.1 - Header
 
 ![Header image](/masterstudy/prototyping/Header.png)
 
-  Sudduvudimo l'header in una
+  Suddividiamo l'header in una
   
 - Navbar top
   - contenente una selct per la scelta della lingua del sito
   - un sezione di controllo per funzionalità aggiuntive
   - una sezione per i collegamenti social e altre piattaforme
   
-- Una sezione "Jumbotron", al cui interno ritroviamo
+- Una sezione "Jumbotron", al cui interno ritroviamo:
 
-  - una **sub-navbar** contenente logo - e compani movie- search-bar con category select - due collegamenti alle aree "istructor" ed "enterprise" - la sezione "Log in" "Signu up" ed un segnapage
+  - una **sub-navbar** contenente:
+    - logo/marchio
+    - search bar con category selector
+    - due collegamenti alle aree "instructor" ed "enterprise"
+    - la sezione "Log in" "Signu up" ed un segnapage
   - sotto area informativa del jumbotron suddivisa in due sottosezioni
     - una **info_box** alla sinistra, formata da un "title" - slogan - button
-    - una image composta alla cui poter associare degli effetti differenziati di movimento o transizione diversificate
+    - una image modulare, a cui poter associare effetti di transizione.
 
 ---
 
@@ -70,31 +74,40 @@ Il Main è il corpo del page, pur essendo una macroarea, al suo interno ritrovia
 
 ![Offer Preview](prototyping/Offer_preview.png)
 
-- Una **"offer preview"** dove troviamo i punti di forza del prodotto, quali il riconoscimento della certificazione, le tempistiche garantite e alcune proposte, suddivise per macrosettori, delle offerte formative proposte. Le informazioni sono stilizzate a loro volta in due microaree
+- Una **"offer preview"** dove troviamo i punti di forza del prodotto, quali il riconoscimento della certificazione, le tempistiche garantite e alcune proposte suddivise per macrosettori, contenenti le offerte formative proposte. Le informazioni sono stilizzate a loro volta in due microaree:
 
-  - Nella prima sotto forma di card dello stesso style ( icona - titolo - paragrafo), vengono brevemente riepilogati alcuni punti forti
+  - Nella prima ritroviamo, sotto forma di card ( icona - titolo - paragrafo), un breve riepilogo dei punti di forza del prodotto.
   - Mentre nella seconda, sotto forma di immagini ritroviamo un accenno all'offerta formativa tematizzata dei corsi proposti
 
 #### 1.2.2 Main - "Info Banner"
 
 ![Banner](prototyping/Banner.png)
 
-- **info banner** - con una struttura molto simile al**box** presente nel **jumbotron**, quindi due sezioni, una sinistra con **info_box** (titolo - descrizione - button) e destra - banner_image.
+- **info banner** - ha una struttura simile al **box** presente nel **jumbotron**.
+Due sezioni:
+  - una sinistra, con **info_box**
+    - titolo;
+    - descrizione;
+    - button;
+  - una destra, contenente il - **banner_image**.
 
 #### 1.2.3 Main - "Showcase Products - Recent Courses"
 
 ![Courses](prototyping/Carousel.png)
 
-In questa sezione è presente una raccolta dei prodotti con una sub-row dove poter selezionare le categorie d'interesse, ed una vetrina dei prodotti, stilizzati sotto forma di card, al cui interno ritroviamo  
+In questa sezione è presente:
 
-- Una image,(in alcuni casi è presente un bage che li classifica come "new" - "hot" - "special")
-- La macro-categoria a cui è associato il course
-- La durata o la sua valutazione
-- Il costo, e la dove un eventuale sconto o proposto in versione "Free"
+- una raccolta dei prodotti con una sub-row dove poter selezionare le categorie d'interesse;
+- una vetrina dei prodotti, stilizzati sotto forma di card, al cui interno ritroviamo  
+
+  - Una image,(in alcuni casi è presente un bage che li classifica come "new" - "hot" - "special")
+  - La macro-categoria a cui è associato il course
+  - La durata o la sua valutazione
+  - Il costo, e la dove previsto, un eventuale sconto o proposta "Free"
 
 button centrale "Show all"
 
-#### 1.2.4 Main - "Our Statistics"
+#### 1.2.4 Main - "Our Numbers"
 
 ![Statistics](prototyping/Statistics.png)
 
@@ -106,11 +119,11 @@ Come cornice alla sezione ritroviamo un'immagine posizionata assolutamente nella
 
 ![Newsletter](prototyping/Newsletter.png)
 
-Questa sezione permette di interagire con l'utente, permettendogli di esser inserito nella emailing list, per ricevere eventuali offerte, news, offerte, ecc.
-La sia struttura può esser sintetizzata in due colonne
+Questa sezione permette di interagire con l'utente, permettendogli di esser inserito nella emailing list, per ricevere eventuali offerte, news, ecc.
+La sua struttura può esser identificata in due colonne:
 
-- Una sinistra in cui ritroviamo un sub-title e un breve messaggio descrittivo
-- Alla destra ritroviamo un label che da indicazioni sintetiche all'utente del tipo di dato da poter inserire, e successivamente al di sotto, il tag input email che permette l'inserimento della mail con i corretti criteri associativi ed il tasto submit per l'invio, e quindi iscrizione alla emailing list.
+- la prima a sinistra, in cui ritroviamo un sub-title e un breve messaggio descrittivo
+- in quella alla destra, il tag input email che permette l'inserimento della mail con i corretti criteri associativi ed il tasto submit per l'invio, e quindi iscrizione alla emailing list.
 
 #### 1.2.6 Main - "Carousel Polular Courses"
 
@@ -125,7 +138,11 @@ La sua macrosctruttura è composta di un colore di background che ne identifica 
 
 ![Sectorized Offers](prototyping/Sectorized_offers.png)
 
-Ritroviamo due **box_card** di eguale struttura e dimensione -  con un elemento grafico composto da un'immagine nella parte sinistra e una descrizione del prodotto specializzato nella parte destra. La info section si articola con un Titolo - una breve descrizione ed il button di collegamento.
+In questa sezione itroviamo due **box_card** di eguale struttura e dimensione, con annessa un immagine nella parte sinistra e una descrizione del prodotto specializzato nella parte destra. La info section si articola in:
+
+- un titolo;
+- una breve descrizione;
+- un button di collegamento.
 
 #### 1.2.8 Main - "Testimonial - Cases History"
 

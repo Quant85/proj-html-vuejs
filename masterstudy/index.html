@@ -22,6 +22,10 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700&display=swap"
+    rel="stylesheet">
 
 </head>
 <body>
@@ -53,29 +57,118 @@
           
         </nav>
         <!-- /#navbar_top -->
-        <nav id="navbar_bottom"></nav>
+        <nav class="navbar_bottom">
+          <img :src="`${logo}`" alt="logo ms">
+          <div class="search_bar">
+            <span class="search_categories">
+              <i class="fas fa-bars"></i>
+              <span class="categories_search">{{categories.type}}</span>
+              <!-- in questo punto possiamo generare mediante vue la lista delle categorie da associare come filtro, attivando la condizione show!=show mediante funzione @click="vis"-->
+              <ul class="categories_menu_search" v-if="categories.state">
+                <li v-for="category in categories.category">{{category.categoryName}}</li>
+              </ul>
+              <!-- /.category -->
+            </span>
+            <!-- @submit.prevent="searchCourses()" con submit -->
+            <form method="POST">
+              <input type="search" maxlength="200" v-model="searchCourses" placeholder="Search Courses" class="input_search">
+            <!-- @click="searchCourses()" su button/icon -->
+          </form>
+          <button class="magnifier_button">
+            <i class="fal fa-search"></i>
+          </button>
+            <div class="wrap_link">
+              <a class="link_navbar_button" :href="`${loginEelement.link}`" v-for="loginEelement in linkNavbarButtom">
+                <i :class="`fab ${loginEelement.icon}`"></i>
+                <samp>{{loginEelement.txt}}</samp>
+              </a>
+            </div>
+            <!-- /.login -->
+            <!-- /.search -->
+          </div>
+          <div class="login flex">
+              <a :href="`${element.link}`" :class="`${element.class}`" v-for="element in login">
+                <i :class="`${element.icon}`" v-if="element.icon != ''"></i>
+                <span>{{element.txt}}</span>
+              </a>
+          </div>
+        </nav>
         <!-- /#navbar_bottom -->
       </nav>
         <!-- /.navbar -->
 
-      <div class="jumbotron">
+      <div class="jumbotron container">
         <div class="info_box">
-          <h1 class="primary_titel">Start Investing in You</h1>
-          <p class="info_spot">With over 1200 courses in 18 subjects, you're guaranteed to find something that's right
+          <h1 class="primary_titel mb_30">Start Investing in You</h1>
+          <p class="info_spot mb_30">With over 1200 courses in 18 subjects, you're guaranteed to find something that's
+            right
             for you.</p>
-            <a class="btn btn-primary btn-lg" href="Jumbo action link" role="button">Jumbo join for free</a>
+            <a class="btn btn-primary" href="sectorized_offers">Join for free</a>
         </div>
-        <div class="img_box">
-          <img src="" alt="" id="base">
-          <img src="" alt="" id="book_1">
-          <img src="" alt="" id="book_2">
-          <img src="" alt="" id="book_2">
-        </div>
+        <figure class="img_box">
+          <img :src="`${img.src}`" alt="" :class="`${img.name}`" v-for="img in imgBox">
+        </figure>
         <!-- /.img_box -->
         <!-- /.info_box -->
       </div>
     </header>
     <!-- /#ms_header -->
+
+    <!-- MAIN  -->
+    <main>
+      <section class="offert_preview">
+
+      </section>
+      <!-- /.offert_preview -->
+      <section class="info_banner">
+
+      </section>
+      <!-- /.info_banner -->
+      <section class="showcase_products">
+
+      </section>
+      <!-- /.showcase_products -->
+      <section class="our_numbers">
+
+      </section>
+      <!-- /.our_numbers -->
+      <section class="newsletter">
+
+      </section>
+      <!-- /.newsletter -->
+      <section class="carousel_courses">
+
+      </section>
+      <!-- /.carousel_courses -->
+      <section id="sectorized_offers">
+
+      </section>
+      <!-- /.sectorized_offers -->
+      <section class="testimonial">
+
+      </section>
+      <!-- /.testimonial -->
+
+    </main>
+    <!-- /MAIN  -->
+
+    <!-- FOOTER  -->
+    <footer>
+      <ul>
+        <li></li>
+      </ul>
+      <ul>
+        <li></li>
+      </ul>
+      <ul>
+        <li></li>
+      </ul>
+      <ul>
+        <li></li>
+      </ul>
+
+    </footer>
+    <!-- /FOOTER  -->
 
 
 
