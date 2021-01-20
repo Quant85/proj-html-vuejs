@@ -51,12 +51,12 @@ Project - "masterstudy"
   - un sezione di controllo per funzionalità aggiuntive
   - una sezione per i collegamenti social e altre piattaforme
   
-Subito dopo è presente una sezione "Jumbotron", al cui interno ritroviamo
+- Una sezione "Jumbotron", al cui interno ritroviamo
 
-- una **sub-navbar** contenente logo - e compani movie- search-bar con category select - due collegamenti alle aree "istructor" ed "enterprise" - la sezione "Log in" "Signu up" ed un segnapage
-- sotto area informativa del jumbotron suddivisa in due sottosezioni
-  - una **info_box** alla sinistra, formata da un "title" - slogan - button
-  - una image composta alla cui poter associare degli effetti differenziati di movimento o transizione diversificate
+  - una **sub-navbar** contenente logo - e compani movie- search-bar con category select - due collegamenti alle aree "istructor" ed "enterprise" - la sezione "Log in" "Signu up" ed un segnapage
+  - sotto area informativa del jumbotron suddivisa in due sottosezioni
+    - una **info_box** alla sinistra, formata da un "title" - slogan - button
+    - una image composta alla cui poter associare degli effetti differenziati di movimento o transizione diversificate
 
 ---
 
