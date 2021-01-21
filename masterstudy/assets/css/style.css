@@ -672,27 +672,60 @@ main{
 footer{
   height: 243px;
   width: 100%;
-  padding: 63px 0px 25px 0px;
+  padding: 63px 0px 25px;
   display: flex;
   justify-content: center;
 }
 
 footer>.footer_wrap{
   width: var(--w_wrap);
+  padding: 0px 25px;
 }
 .footer_wrap h2{
   text-transform: capitalize;
+  line-height: 34px;
+  letter-spacing: -1.5px;
+  font-family: 'Montserrat',
+  sans-serif;
+  font-weight: 700;
+  color: #273044;
+  margin-bottom: 21px;
 }
 .footer_box{
   width: calc(100% / 4);
   padding: 0px 15px 15px;
 }
 
+.about_section .about_text{
+  font-size: 13px;
+  line-height: 20px;
+  font-family: 'Open Sans',
+  sans-serif;
+}
+
 .about_section a{
   color: #1165e4;
 }
+
+.footer_box .social li{
+  margin: 15px 15px 0 0;
+  font-size: 20px;
+}
+
 .footer_box .social a{
-  color: #444;
+  color: #aaa;
+  transition: all .25s ease;
+}
+
+.footer_box .social a:hover{
+  color: #195ec8;
+}
+/* about */
+
+/* contact */
+.contact_section .addre,
+.phone_numbers {
+  margin-bottom: 12px;
 }
 
 .pages_list{
