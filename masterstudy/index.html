@@ -264,14 +264,14 @@
           <h2 class="section_title">{{footer.sectionBlog.title}}</h2>
           <ul class="blog_articles">
             <li class="article" v-for="article in footer.sectionBlog.articles">
-              <a href="">
-                <img src="" alt="">
+              <a :href="`${article.link}`">
+                <img :src="`${article.img}`" alt="">
               </a>
               <span class="wrap_text">
                 <a href="">
-                  <h3 class="article_title"></h3>
+                  <h3 class="article_title">{{article.title}}</h3>
                 </a>                
-                <h4 classe="date"></h4>
+                <h4 classe="date"> — {{article.date}}</h4>
               </span>
             </li>
           </ul>

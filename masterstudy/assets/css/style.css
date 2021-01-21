@@ -713,3 +713,10 @@ footer>.footer_wrap{
 .pages_list a:hover {
   color: #1654d8;
 }
+
+
+.blog_articles .wrap_text{
+  display: inline-block;
+  width: 70%;
+}
+

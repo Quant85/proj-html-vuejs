@@ -347,16 +347,16 @@ let ms_app = new Vue({
         title:"blog",
         articles:{
           art1:{
-            title:"",
-            img:"",
+            title:'Our main target is to “Developing Yourself as a Leader”',
+            img:"assets/img/footer/photo-1517520287167-4bbf64a00d66-75x75.jpeg",
             link:"#",
-            date:"",
+            date:" August 9, 2018",
           },
           art2:{
-            title:"",
-            img:"",
+            title:'Those Other College Expenses You Aren`t Thinking About',
+            img:"assets/img/footer/photo-1490376840453-5f616fbebe5b-75x75.jpeg",
             link:"#",
-            date:"",
+            date:" June 3, 2015",
           }
         }
       }
