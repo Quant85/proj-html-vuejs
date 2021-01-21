@@ -80,7 +80,7 @@ let ms_app = new Vue({
       },
       {
         icon:"fa-behance",
-        link:"https://www.instagram.com",
+        link:"https://www.behance.net/",
       },
       {
         icon:"fa-dribbble",
@@ -88,7 +88,7 @@ let ms_app = new Vue({
       },
       {
         icon:"fa-flickr",
-        link:"https://dribbble.com/",
+        link:"https://www.flickr.com/",
       },
       {
         icon:"fa-git",
@@ -152,7 +152,7 @@ let ms_app = new Vue({
           },
         },
         {
-          categoryName:"exsercise",
+          categoryName:"exercise",
           link:"#",
           courses:{
             numberCourses:7,
@@ -270,7 +270,48 @@ let ms_app = new Vue({
           reference:"countries reached",
           numb:150,
         }
-    ]
-  }
+      ]
+    },
+    footer:{
+      sectionAbout:{
+        title:"about",
+        societyLink:{
+          link:"#header_nav",
+          name:"Masterstudy",
+        },
+        description:" is Education WordPress theme featured by Learning Management System (LMS) for online education.",
+        by:{
+          link:"https://github.com/Quant85",
+          txt:"StylemixThemes.",
+        },        
+        socialContacts:{
+          facebook:{
+            title:"facebook",//potrei anche utilizzare la key
+            icon:"fab fa-facebook",
+            link:"https://www.facebook.com/",
+          },
+          twitter:{
+            title:"twitter",//potrei anche utilizzare la key
+            icon:"fa-twitter",
+            link:"https://twitter.com/login?lang=it",
+          },
+          instagram:{
+          title:"instagram",//potrei anche utilizzare la key
+          icon:"fa-instagram",
+          link:"https://www.instagram.com",
+          },
+        }
+      },
+      sectionContact:{
+        title:"contact",
+        emailLink:"mailto:antonio.85.q@gmail.com",
+        address:"USA, Callifornia 20, First Avenue, Callifornia",
+        number:{
+          tel:"Tel.: +1 212 458 300 32",
+          fax:"Fax.: +1 212 375 24 14",
+        },
+        email:"info@masterstudy.com",
+      },
+    }
   }
 });

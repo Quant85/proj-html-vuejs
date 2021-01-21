@@ -31,7 +31,7 @@
 <body>
   <div id="ms_app">
     <header id="ms_header">
-      <nav class="navbar">
+      <nav id="header_nav" class="navbar">
         <nav id="navbar_top">
           <div class="navbar_top_left">
             <label for=""></label>
@@ -158,20 +158,22 @@
       <!-- /.showcase_products -->
       <section class="our_numbers">
         <!-- si potrebbe inserire un container cosi da dare un background color di sfondo a  our_numbers w100% e l'immagine in bg al wrap-->
-        <div class="text_area">
-          <h2>{{numberSection.title}}</h2>
-          <h3>{{numberSection.description}}</h3>
-        </div>
-        <!-- /.text_area -->
-        <div class="wrap_numbers">
-          <div class="box_number" v-for="val in numberSection.numbers">
-            <h2>{{val.numb}}</h2>
-            <h4>{{val.reference}}</h4>
+        <div class="our_wrap">
+          <div class="text_area">
+            <h2>{{numberSection.title}}</h2>
+            <h3>{{numberSection.description}}</h3>
           </div>
-          <!-- /.box_number -->
+          <!-- /.text_area -->
+          <div class="wrap_numbers">
+            <div class="box_number" v-for="val in numberSection.numbers">
+              <h2>{{val.numb}}</h2>
+              <h4>{{val.reference}}</h4>
+            </div>
+            <!-- /.box_number -->
+          </div>
+          <!-- /.wrap_numbers -->
         </div>
-        <!-- /.wrap_numbers -->
-
+        <!-- /.our_wrap -->
       </section>
       <!-- /.our_numbers -->
       <section class="newsletter">
@@ -224,19 +226,44 @@
 
     <!-- FOOTER  -->
     <footer>
-      <ul>
-        <li></li>
-      </ul>
-      <ul>
-        <li></li>
-      </ul>
-      <ul>
-        <li></li>
-      </ul>
-      <ul>
-        <li></li>
-      </ul>
+      <div class="footer_wrap">
+        <section class="about_section footer_box">
+          <h2 class="section_title">{{footer.sectionAbout.title}}</h2>
+          <p>
+            <a :href="`${footer.sectionAbout.societyLink.link}`" title="">{{footer.sectionAbout.societyLink.name}}
+            </a>
+            {{footer.sectionAbout.description}}
+            <a :href="`${footer.sectionAbout.societyLink.link}`">{{footer.sectionAbout.by.txt}}</a>
+          </p>
+          <ul class="social">
+            <li><a href=""><i class="social_icon"></i></a></li>
+          </ul>
+        </section>
+        <section class="contact_section">
+          <h2 class="section_title"></h2>
+          <li></li>
+        </section>
+        <section class="pages_section">
+          <h2 class="section_title"></h2>
+          <ul class="pages_list">
+            <li class="page"></li>
+          </ul>
+        </section>
+        <section class="blog_section"><!-- per ottimizzare dovrei aggiungere codice direttamente da vue con annessi i 4 contenitori -->
+          <h2 class="section_title"></h2>
+          <ul class="blog_articles">
+            <li class="article">
+              <img src="" alt="">
+              <span class="wrap_text">
+                <h3 class="article_title"></h3>
+                <h4 classe="date"></h4>
+              </span>
+            </li>
+          </ul>
+        </section>
 
+      </div>
+      <!-- /.footer_wrap -->
     </footer>
     <!-- /FOOTER  -->
 

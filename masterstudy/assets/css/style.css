@@ -1,5 +1,8 @@
 /* Root const */
-
+:root{
+  --w_cont: calc(100% * (1690 / 1920));
+  --w_wrap: 1280px;
+}
 
 
 /* reset Rules */
@@ -49,7 +52,7 @@ body {
   justify-content: center;
 }
 header{
-  width: calc( 100% * (1690 / 1920));
+  width: var(--w_cont);
   background-color: #ffffff;
   margin-bottom: 25px;
 }
@@ -287,7 +290,7 @@ a.items_badge{
 /* ----  jumbotron--- */
 .jumbotron.container{
   width: auto;
-  max-width: 1280px;
+  max-width: var(--w_wrap);
   padding: 0px 15px;
   margin: 95px auto 0 auto;
   display: flex;
@@ -384,7 +387,7 @@ main{
 .offers_preview{
   display: flex;
   flex-flow: column wrap;
-  max-width: 1280px;
+  max-width: var(--w_wrap);
   font-family: 'Montserrat',
   sans-serif;
   padding: 0 15px;
@@ -415,7 +418,7 @@ main{
 
 .preview_card h4{
   line-height: 26px;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 16px;
   margin-bottom: 20px;
 }
@@ -499,7 +502,7 @@ main{
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
-  max-width: 1280px;
+  max-width: var(--w_wrap);
   font-family: 'Montserrat',
   sans-serif;
   padding: 0 15px;
@@ -543,6 +546,7 @@ main{
 /* showcase_products */
 .showcase_products{
   height: 1250px;
+  width: var(--w_cont);
 }
 
 .showcase_products .title{
@@ -558,6 +562,7 @@ main{
 .categories_filter{
   list-style: none;
   text-decoration: none;
+  text-align: center;
 }
 .category_type{
   display: inline;
@@ -576,6 +581,13 @@ main{
   background-position: center bottom;
 }
 
+.our_wrap{
+  text-align: center;
+}
+.wrap_numbers{
+  display: flex;
+  justify-content: center;
+}
 
 
 /* newsletter */
@@ -584,6 +596,9 @@ main{
   height: 200px;
   width: 100%;
   background-color: #4dd3ac;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -647,9 +662,26 @@ main{
   width: 0;
   z-index: 1;
   right: -15px;
-  top: 115px;
+  top: 50%;
 }
 
 /* ***** /MAIN ***** */
 
 /* FOOTER */
+
+footer{
+  height: 243px;
+  width: 100%;
+  padding: 63px 0px 25px 0px;
+}
+
+footer>.footer_wrap{
+  width: var(--w_wrap);
+  display: flex;
+  justify-content: center;
+}
+
+
+.footer_box{
+  width: calc(100% / 4);
+}
