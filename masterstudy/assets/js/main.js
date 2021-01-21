@@ -126,6 +126,7 @@ let ms_app = new Vue({
         },
         {
           categoryName:"material design",
+          link:"#",
           courses:{
             numberCourses:5,
             link:"#",
@@ -133,7 +134,17 @@ let ms_app = new Vue({
           },
         },
         {
+          categoryName:"photography",
+          link:"#",
+          courses:{
+            numberCourses:4,
+            link:"#",
+            src:"assets/img/main/preview/cat_6-370x155.jpg"
+          },
+        },
+        {
           categoryName:"music",
+          link:"#",
           courses:{
             numberCourses:5,
             link:"#",
@@ -142,20 +153,14 @@ let ms_app = new Vue({
         },
         {
           categoryName:"exsercise",
+          link:"#",
           courses:{
             numberCourses:7,
             link:"#",
             src:"assets/img/main/preview/cat_4-370x155.jpg"
           },
         },
-        {
-          categoryName:"photography",
-          courses:{
-            numberCourses:4,
-            link:"#",
-            src:"assets/img/main/preview/cat_6-370x155.jpg"
-          },
-        },
+        
       ],
     },
     linkNavbarButtom:[
@@ -233,5 +238,13 @@ let ms_app = new Vue({
         description:"Online post-graduate certificates are a popular way to develop your professional qualifications of Masterstudy",
       }
     ],
+    infoBanner:[
+      {
+        title:"Limitless learning, more possibilities",
+        description:"Online courses open the opportunity for learning to almost anyone, regardless of their scheduling commitments.",
+        src:"../img/main/banner/Untitled-1-1-1-1-1.png",
+        link:"#",
+      }
+    ]
   }
 });
