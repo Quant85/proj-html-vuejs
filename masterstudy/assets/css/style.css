@@ -712,21 +712,24 @@ footer>.footer_wrap{
   font-size: 20px;
 }
 
-.footer_box .social a{
+.footer_box .social a,
+.contact_section a {
   color: #aaa;
   transition: all .25s ease;
 }
 
-.footer_box .social a:hover{
+.footer_box .social a:hover,
+.contact_section a:hover {
   color: #195ec8;
 }
 /* about */
 
 /* contact */
-.contact_section .addre,
+.contact_section .address,
 .phone_numbers {
   margin-bottom: 12px;
 }
+
 
 .pages_list{
   columns: 2;
@@ -736,11 +739,13 @@ footer>.footer_wrap{
 }
 
 .pages_list .page{
-  padding: 5px 0;
+  margin-bottom: 17px;
 }
 
 .pages_list a{
   color: #273044;
+  line-height: 12px;
+  font-weight: 400;
 }
 
 .pages_list a:hover {
