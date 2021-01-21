@@ -245,6 +245,32 @@ let ms_app = new Vue({
         src:"../img/main/banner/Untitled-1-1-1-1-1.png",
         link:"#",
       }
+    ],
+    recentCourses:{
+        active: true,
+        categories:["art","exsercise","material design","music","photography","software development"],
+    },
+    numberSection:{
+      title:"We are Proud",
+      description:"Certificate courses are instructed by highly educated and qualified instructors who hold doctoral and master’s level degrees.",
+      numbers:[
+        {
+          reference:"students",
+          numb:2000,
+        },
+        {
+          reference:"courses",
+          numb:950,
+        },
+        {
+          reference:"hours video",
+          numb:1600,
+        },
+        {
+          reference:"countries reached",
+          numb:150,
+        }
     ]
+  }
   }
 });

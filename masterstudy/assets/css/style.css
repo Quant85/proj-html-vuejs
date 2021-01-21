@@ -94,10 +94,12 @@ select:focus{
 .navbar_top_right {
   width: 50%;
   display: flex;
+  justify-content: flex-end;
 }
 .items_menu {
   display: flex;
   justify-content: flex-start;
+  margin-right: 15px;
 }
 
 .navbar_items_menu {
@@ -114,7 +116,7 @@ select:focus{
 a.items_badge{
   position: absolute;
   right: 0px;
-  top: -6px;
+  top: -8px;
   background: #dc1245;
   color: #fff;
   padding: 0 5px;
@@ -134,7 +136,11 @@ a.items_badge{
   font-weight: 400;
   font-style: normal;
   color: #777;
-  font-size: 16px;
+  font-size: 14px;
+  transition: all .3s cubic-bezier(0, .01, .27, 1);
+}
+.navbar_social a:hover {
+  color: #195ec8;
 }
 
 .navbar_bottom{
@@ -294,7 +300,8 @@ a.items_badge{
   color: #273044;
   font-family: 'Montserrat',
   sans-serif;
-  padding: 35px 15px 0px 15px;
+  letter-spacing: -.6px;
+  padding: 35px 15px 0px 50px;
   margin-top: 157px;
 }
 
@@ -485,6 +492,7 @@ main{
   width:100%;
   height: 600px;
   background-image: url(../img/main/banner/Untitled-1-1-1-1-1.png);
+  margin-bottom: 63px;
 }
 
 .info_text{
@@ -531,3 +539,117 @@ main{
   width: max-content;
   transform: translateX(15%);
 }
+
+/* showcase_products */
+.showcase_products{
+  height: 1250px;
+}
+
+.showcase_products .title{
+  font-family: 'Montserrat',
+  sans-serif;
+  color: #273044;
+  font-size: 50px;
+  font-weight: 300;
+  line-height: 50px;
+  text-align: center;
+}
+
+.categories_filter{
+  list-style: none;
+  text-decoration: none;
+}
+.category_type{
+  display: inline;
+}
+
+
+
+/* our_numbers */
+
+.our_numbers{
+  height: 755px;
+  width: 100%;
+  background-color: #e4e8ed;
+  background-image: url(../img/main/number/we_proud.png);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+
+
+
+/* newsletter */
+
+.newsletter{
+  height: 200px;
+  width: 100%;
+  background-color: #4dd3ac;
+}
+
+
+/* carousel_courses */
+
+.carousel_courses{
+  height: 795px;
+  width: 100%;
+  background-color: #e4e8ed;
+}
+
+
+/*  business_box */
+
+#business_box{
+  height: 600px;
+  width: 100%;
+}
+
+/* testimonial */
+
+.testimonial{
+  width: 100%;
+  height: 700px;
+  background-image: url(../img/main/testimonial/brooke-cagle-224821-unsplash-1-1920x700.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.testimonial .containe{
+  height: 100%;
+}
+
+.bubble_wrap{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 60px;
+}
+
+.bubble {
+  position: relative;
+  width: 365px;
+  max-width: 737px;
+  min-height: 525px;
+  padding: 0px;
+  background: #FFFFFF;
+  border-radius: 0px;
+}
+
+.bubble:after {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 15px 0 15px 15px;
+  border-color: transparent #FFFFFF;
+  display: block;
+  width: 0;
+  z-index: 1;
+  right: -15px;
+  top: 115px;
+}
+
+/* ***** /MAIN ***** */
+
+/* FOOTER */

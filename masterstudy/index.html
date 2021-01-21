@@ -145,18 +145,46 @@
           <a href="#" class="btn_read">read more</a>
         </div>
         <!-- /.info_text -->
-
       </section>
       <!-- /.info_banner -->
       <section class="showcase_products">
-
+        <h2 class="title" mb_30>Recent courses </h2>
+        <ul class="categories_filter">
+          <li class="category_type"> All Categories</li>
+          <!-- qui generare funzione filtro -->
+          <li class="category_type " v-for="(caregory, ind) in recentCourses.categories">{{caregory}}</li>
+        </ul>
       </section>
       <!-- /.showcase_products -->
       <section class="our_numbers">
+        <!-- si potrebbe inserire un container cosi da dare un background color di sfondo a  our_numbers w100% e l'immagine in bg al wrap-->
+        <div class="text_area">
+          <h2>{{numberSection.title}}</h2>
+          <h3>{{numberSection.description}}</h3>
+        </div>
+        <!-- /.text_area -->
+        <div class="wrap_numbers">
+          <div class="box_number" v-for="val in numberSection.numbers">
+            <h2>{{val.numb}}</h2>
+            <h4>{{val.reference}}</h4>
+          </div>
+          <!-- /.box_number -->
+        </div>
+        <!-- /.wrap_numbers -->
 
       </section>
       <!-- /.our_numbers -->
       <section class="newsletter">
+        <div class="info_newsletter">
+          <h3></h3>
+          <h4></h4>
+        </div>
+        <form>
+          <label for=""></label>
+          <input type="email" name="" id="">
+          <input type="submit" value="SUBSCRIBE">
+        </form>
+        <!-- /.info_newsletter -->
 
       </section>
       <!-- /.newsletter -->
@@ -165,11 +193,29 @@
       </section>
       <!-- /.carousel_courses -->
       <section id="business_box">
+        <div class="business_card">
+          <img src="" alt="">
+          <h2></h2>
+          <h3></h3>
+          <a href=""></a>
+        </div>
+        <!-- /.business_card -->
 
       </section>
-      <!-- /.sectorized_offers -->
+      <!-- /.business_box -->
       <section class="testimonial">
-
+        <div class="containe">
+          <div class="bubble_wrap">
+            <div class="bubble">
+              <h2>{{}}</h2>
+              <p></p>
+              <h3></h3>
+              <h4></h4>
+            </div>
+            <!-- /.bubble -->
+          </div>
+          <!-- /.bubble_wrap -->
+        </div>
       </section>
       <!-- /.testimonial -->
 
