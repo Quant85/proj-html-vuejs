@@ -679,7 +679,7 @@ footer{
 
 footer>.footer_wrap{
   width: var(--w_wrap);
-  padding: 0px 25px;
+  padding: 0px 20px;
 }
 .footer_wrap h2{
   text-transform: capitalize;
@@ -752,9 +752,32 @@ footer>.footer_wrap{
   color: #1654d8;
 }
 
-
-.blog_articles .wrap_text{
-  display: inline-block;
-  width: 70%;
+.blog_articles img{
+  margin-right: 20px;
+  margin-bottom: 21px;
+  vertical-align: top;
 }
 
+.blog_articles .wrap_text {
+  display: inline-block;
+  width: 60%;
+  min-height: 55px;
+  font-family: 'Montserrat',
+  sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.wrap_text a {
+  color: #aaa;
+}
+
+.blog_articles .wrap_text .article_title:hover {
+  color: #195ec8;
+}
+
+.blog_articles .date {
+  color: #aaa;
+  opacity: .6;
+}
