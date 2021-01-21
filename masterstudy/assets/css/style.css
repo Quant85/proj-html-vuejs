@@ -31,7 +31,7 @@
   display: flex;
 }
 
-ul{
+ul:not(.pages_list) {
   list-style: none;
 }
 
@@ -673,15 +673,43 @@ footer{
   height: 243px;
   width: 100%;
   padding: 63px 0px 25px 0px;
-}
-
-footer>.footer_wrap{
-  width: var(--w_wrap);
   display: flex;
   justify-content: center;
 }
 
-
+footer>.footer_wrap{
+  width: var(--w_wrap);
+}
+.footer_wrap h2{
+  text-transform: capitalize;
+}
 .footer_box{
   width: calc(100% / 4);
+  padding: 0px 15px 15px;
+}
+
+.about_section a{
+  color: #1165e4;
+}
+.footer_box .social a{
+  color: #444;
+}
+
+.pages_list{
+  columns: 2;
+  text-transform: capitalize;
+  width: fit-content;
+  list-style-position: inside;
+}
+
+.pages_list .page{
+  padding: 5px 0;
+}
+
+.pages_list a{
+  color: #273044;
+}
+
+.pages_list a:hover {
+  color: #1654d8;
 }

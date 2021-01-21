@@ -292,26 +292,74 @@ let ms_app = new Vue({
           },
           twitter:{
             title:"twitter",//potrei anche utilizzare la key
-            icon:"fa-twitter",
+            icon:"fab fa-twitter",
             link:"https://twitter.com/login?lang=it",
           },
           instagram:{
           title:"instagram",//potrei anche utilizzare la key
-          icon:"fa-instagram",
+          icon:"fab fa-instagram",
           link:"https://www.instagram.com",
           },
         }
       },
       sectionContact:{
         title:"contact",
-        emailLink:"mailto:antonio.85.q@gmail.com",
         address:"USA, Callifornia 20, First Avenue, Callifornia",
-        number:{
+        numbers:{
           tel:"Tel.: +1 212 458 300 32",
           fax:"Fax.: +1 212 375 24 14",
         },
-        email:"info@masterstudy.com",
+        email:{
+          txt:"info@masterstudy.com",
+          link:"mailto:antonio.85.q@gmail.com",
+        }
       },
+      sectionPage:{
+        title:"pages",
+        pages:{
+          blog:{
+          txt:"Blog",
+          link:"#",
+          },
+          home:{
+            txt:"Home",
+            link:"#",
+          },
+          shortcodes:{
+            txt:"Shortcodes",
+            link:"#",
+          },
+          courses:{
+            txt:"courses",
+            link:"#",
+          },
+          membership:{
+            txt:"membership a...",
+            link:"#",
+          },
+          typography:{
+            txt:"typography",
+            link:"#",
+          },
+        }
+      },
+      sectionBlog:{
+        title:"blog",
+        articles:{
+          art1:{
+            title:"",
+            img:"",
+            link:"#",
+            date:"",
+          },
+          art2:{
+            title:"",
+            img:"",
+            link:"#",
+            date:"",
+          }
+        }
+      }
     }
   }
 });

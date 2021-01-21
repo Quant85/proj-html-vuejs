@@ -226,36 +226,51 @@
 
     <!-- FOOTER  -->
     <footer>
-      <div class="footer_wrap">
+      <div class="footer_wrap flex">
         <section class="about_section footer_box">
           <h2 class="section_title">{{footer.sectionAbout.title}}</h2>
           <p>
             <a :href="`${footer.sectionAbout.societyLink.link}`" title="">{{footer.sectionAbout.societyLink.name}}
             </a>
-            {{footer.sectionAbout.description}}
-            <a :href="`${footer.sectionAbout.societyLink.link}`">{{footer.sectionAbout.by.txt}}</a>
+            {{footer.sectionAbout.description}} <br> Developed by
+            <a :href="`${footer.sectionAbout.societyLink.link}`">  {{footer.sectionAbout.by.txt}}</a>
           </p>
-          <ul class="social">
-            <li><a href=""><i class="social_icon"></i></a></li>
+          <ul class="social flex">
+            <li v-for="(icon, key) in footer.sectionAbout.socialContacts">
+              <a :href="`${footer.sectionAbout.socialContacts[key].link}`">
+                <i :class="`social_icon ${footer.sectionAbout.socialContacts[key].icon}`"></i>
+              </a>
+            </li>
           </ul>
         </section>
-        <section class="contact_section">
-          <h2 class="section_title"></h2>
-          <li></li>
+        <section class="contact_section footer_box">
+          <h2 class="section_title">{{footer.sectionContact.title}}</h2>
+          <p class="address">{{footer.sectionContact.address}}</p>
+          <ul class="phone_numbers">
+            <li class="phone_number" v-for="(number, i) in footer.sectionContact.numbers">{{number}}</li>
+          </ul>
+          <a :href="`${footer.sectionContact.email.link}`">{{footer.sectionContact.email.txt}}</a>
         </section>
-        <section class="pages_section">
-          <h2 class="section_title"></h2>
+        <section class="pages_section footer_box">
+          <h2 class="section_title">{{footer.sectionPage.title}}</h2>
           <ul class="pages_list">
-            <li class="page"></li>
+            <li class="page" v-for="page in footer.sectionPage.pages">
+              <a :href="`${page.link}`">{{page.txt}}</a>
+            </li>
           </ul>
         </section>
-        <section class="blog_section"><!-- per ottimizzare dovrei aggiungere codice direttamente da vue con annessi i 4 contenitori -->
-          <h2 class="section_title"></h2>
+        <section class="blog_section footer_box">
+          <!-- per ottimizzare dovrei aggiungere codice direttamente da vue con annessi i 4 contenitori -->
+          <h2 class="section_title">{{footer.sectionBlog.title}}</h2>
           <ul class="blog_articles">
-            <li class="article">
-              <img src="" alt="">
+            <li class="article" v-for="article in footer.sectionBlog.articles">
+              <a href="">
+                <img src="" alt="">
+              </a>
               <span class="wrap_text">
-                <h3 class="article_title"></h3>
+                <a href="">
+                  <h3 class="article_title"></h3>
+                </a>                
                 <h4 classe="date"></h4>
               </span>
             </li>
