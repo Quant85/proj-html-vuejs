@@ -116,7 +116,26 @@
 
     <!-- MAIN  -->
     <main>
-      <section class="offers_preview">
+      <section class="offers_preview mb_30">
+        <div class="wrap_card_preview">
+          <div class="preview_card" v-for="card in previewCard">
+            <i :class="`icon_preview ${card.icon}`"></i>
+            <h4 class="card_title">{{card.txt}}</h4>
+            <p class="description">{{card.description}}</p>
+          </div>
+          <!-- /.preview_card -->
+        </div>
+        <!-- /.wrap_card_preview -->
+        <div class="preview_courses grid">
+          <figure class="course_window" v-for="imgage in categories.category ">
+            <a :href="`${imgage.courses.link}`"><img :src="`${imgage.courses.src}`" alt=""></a>
+            <div class="footer_img">
+              <a class="category_link" :href="`${imgage.link}`">{{imgage.categoryName}}</a>
+              <a :href="`${imgage.link}`">{{imgage.courses.numberCourses}} Courses</a>
+            </div>
+          </figure>
+        </div>
+        <!-- /.preview_courses -->
 
       </section>
       <!-- /.offert_preview -->

@@ -3,7 +3,7 @@
 let ms_app = new Vue({
   el:'#ms_app',
   data:{
-    logo:"/masterstudy/assets/img/header/MasterStudy_logo.svg",
+    logo:"assets/img/header/MasterStudy_logo.svg",
     languageSelect:[
       {
         language:"English",
@@ -109,29 +109,53 @@ let ms_app = new Vue({
       state:false,
       category:[
         {
-          categoryName:"art",
-          courses:{},
+          categoryName:"software development",
+          courses:{
+            numberCourses:5,
+            src:"assets/img/main/preview/cat_1-770x375.jpg",
+          },
         },
         {
-          categoryName:"exsercise",
-          courses:{},
+          categoryName:"art",
+          link:"#",
+          courses:{
+            numberCourses:8,
+            link:"#",
+            src:"assets/img/main/preview/cat_2-370x155.jpg"
+          },
         },
         {
           categoryName:"material design",
-          courses:{},
+          courses:{
+            numberCourses:5,
+            link:"#",
+            src:"assets/img/main/preview/cat_3-370x155.jpg"
+          },
         },
         {
           categoryName:"music",
-          courses:{},
+          courses:{
+            numberCourses:5,
+            link:"#",
+            src:"assets/img/main/preview/cat_5-370x155.jpg"
+          },
+        },
+        {
+          categoryName:"exsercise",
+          courses:{
+            numberCourses:7,
+            link:"#",
+            src:"assets/img/main/preview/cat_4-370x155.jpg"
+          },
         },
         {
           categoryName:"photography",
-          courses:{},
+          courses:{
+            numberCourses:4,
+            link:"#",
+            src:"assets/img/main/preview/cat_6-370x155.jpg"
+          },
         },
-        {
-        categoryName:"software development",
-        courses:{},
-        }
       ],
     },
     linkNavbarButtom:[
@@ -190,6 +214,23 @@ let ms_app = new Vue({
       {
         src:"assets/img/header/jumbotron/moon.png",
         name:"moon",
+      }
+    ],
+    previewCard:[
+      {
+        icon:"fal fa-globe-americas",
+        txt:"Worldwide Recognize",
+        description:"Our online course certificates can be used around the world and also in most popular universities and companies.",
+      },
+      {
+        icon:"fal fa-desktop-alt",
+        txt:"Mostly Online Learning (sd)",
+        description:"Masterstudy online certificates can be obtained in a range of specialized areas and typically take about a year to complete.",
+      },
+      {
+        icon:"fal fa-calendar-check",
+        txt:" Graduate in as little as 1 Year",
+        description:"Online post-graduate certificates are a popular way to develop your professional qualifications of Masterstudy",
       }
     ],
   }
