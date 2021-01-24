@@ -103,7 +103,7 @@
           <p class="info_spot mb_30">With over 1200 courses in 18 subjects, you're guaranteed to find something that's
             right
             for you.</p>
-            <a class="btn btn-primary" href="sectorized_offers">Join for free</a>
+            <a class="btn btn-primary" href="#sectorized_offers">Join for free</a>
         </div>
         <figure class="img_box">
           <img :src="`${img.src}`" alt="" :class="`${img.name}`" v-for="img in imgBox">
@@ -147,21 +147,71 @@
         <!-- /.info_text -->
       </section>
       <!-- /.info_banner -->
-      <section class="showcase_products">
-        <h2 class="title" mb_30>Recent courses </h2>
+      <section id="showcase_products" class="showcase_products">
+        <h2 class="title mb_30">Recent courses </h2>
         <ul class="categories_filter">
-          <li class="category_type"> All Categories</li>
           <!-- qui generare funzione filtro -->
-          <li class="category_type " v-for="(caregory, ind) in recentCourses.categories">{{caregory}}</li>
+          <li :class="`category_type ${caregory.class}`" v-for="caregory in recentCourses.categories"
+          :key="caregory.id"
+            v-text="caregory.text"
+            @click="activeCategory(caregory.text,caregory.id)"></li>
         </ul>
+
+        <div class="resuls_box flex" >
+          <div :class="`produce_card ${card.badge1?'featured':''}`" v-for=" card in recentCourses.filterRsesults">
+            <div class="header_card">
+              <a :class="card.badge1" href="#"
+                v-if="card.badge1">{{card.badge1}}</a>
+              <a :class="`badge1 ${card.badge2}`" href="#" v-if="card.badge2">{{card.badge2}}</a>
+              <img class="card_img mb_15" :src="card.img" alt="">
+              <!-- /.img_card -->
+            </div>
+            <!-- /.header_card -->
+            <div class="main_card">
+              <h4 class="subcategory">{{card.subcategory}}</h4>
+              <!-- /.subcategory -->
+              <h3 class="course_name">{{card.name}}</h3>
+              <!-- /.course_name -->
+            </div>
+            <!-- /.main_card -->
+            <div class="footer_card flex">
+              <div class="left_footer_card flex">
+                <div class="rating flex" v-show="card.vote">
+                  <span class="star_rating" v-for="starF in card.vote">
+                    <img :src="recentCourses.starFull" alt="star full">
+                  </span>
+                  <span v-for="starE in (5-card.vote)" v-show="card.vote">
+                    <img :src="recentCourses.starFull" alt="star emptyl">
+                  </span>
+                  <samp class="vote">{{card.vote}}</samp>
+                </div>
+                <!-- /.rating -->
+                <div class="duration_course flex" v-show="!card.vote">
+                  <i class="fal fa-clock"></i><span>{{card.duration}}</span>
+                </div>
+                <!-- /.duration_course flex -->
+
+              </div>
+              <!-- /.left_footer_card -->
+              <div class="right_footer_card flex">
+                <h5 v-if="card.price">{{card.price}}</h5>
+                <h4>{{card.fullPrice}}</h4>
+              </div>
+              <!-- /.right_footer_card -->
+            </div>
+            <!-- /.footer_card -->
+          </div>
+          <!-- /.produce_card -->
+        </div>
+        <!-- /.resuls_box -->
+        <a class="btn btn-primary">show all</a>
       </section>
       <!-- /.showcase_products -->
       <section class="our_numbers">
-        <!-- si potrebbe inserire un container cosi da dare un background color di sfondo a  our_numbers w100% e l'immagine in bg al wrap-->
-        <div class="our_wrap">
+        <div class="our_wrap flex">
           <div class="text_area">
-            <h2>{{numberSection.title}}</h2>
-            <h3>{{numberSection.description}}</h3>
+            <h2 class="mb_30">{{numberSection.title}}</h2>
+            <h4>{{numberSection.description}}</h4>
           </div>
           <!-- /.text_area -->
           <div class="wrap_numbers">
@@ -176,43 +226,115 @@
         <!-- /.our_wrap -->
       </section>
       <!-- /.our_numbers -->
-      <section class="newsletter">
-        <div class="info_newsletter">
-          <h3></h3>
-          <h4></h4>
+      <section class="newsletter flex">
+        <div class="wrap_newsletter">
+          <div class="info_newsletter" v-html="newsletter.title">
+            <!-- <h3>{{newsletter.title}}</h3>
+            <p v-text="newsletter.description"></p> -->
+          </div>
+          <form 
+          method="POST">
+          <!-- @submit="checkForm" -->
+            <p class="flex email_form">
+              <label for="email">Your e-mail address</label>
+              <b v-if="newsletter.error.length">Formato email non valido</b>
+            </p>
+            <input type="email" name="email" id="email" v-model="newsletter.email">
+            <input type="submit" value="SUBSCRIBE" @click="checkForm(newsletter.email)">
+          </form>
+          <!-- /.info_newsletter -->
         </div>
-        <form>
-          <label for=""></label>
-          <input type="email" name="" id="">
-          <input type="submit" value="SUBSCRIBE">
-        </form>
-        <!-- /.info_newsletter -->
+        <!-- /.wrap_newsletter -->
 
       </section>
       <!-- /.newsletter -->
-      <section class="carousel_courses">
+      <section class="carousel_courses ">
+        <div class="carousel_header">
+          <h2 class="title mb_30">Popular courses</h2>
+          <h3 class="subtitle">Discover our most popular courses for self learning</h3>
+        </div>
+        <!-- /.carousel_header -->
+        <div class="carousel_box flex">
+          <div :class="`produce_card ${card.badge1?'featured':''}`" v-for="(card,index) in carouselSection.carouselBox">
+            <div class="header_card">
+              <a :class="card.badge1" href="#" v-if="card.badge1">{{card.badge1}}</a>
+              <a :class="`badge1 ${card.badge2}`" href="#" v-if="card.badge2">{{card.badge2}}</a>
+              <img class="card_img mb_15" :src="card.img" alt="">
+              <!-- /.img_card -->
+            </div>
+            <!-- /.header_card -->
+            <div class="main_card">
+              <h4 class="subcategory">{{card.subcategory}}</h4>
+              <!-- /.subcategory -->
+              <h3 class="course_name">{{card.name}}</h3>
+              <!-- /.course_name -->
+            </div>
+            <!-- /.main_card -->
+            <div class="footer_card flex">
+              <div class="left_footer_card flex">
+                <div class="rating flex" v-show="card.vote"><!-- v-if dava problemi nella renderizzazione, cosa che non fa il v-show, perchè li renderizza ma li nasconde ovviando il problema della renderizzazione/sincronizzazione -->
+                  <span class="star_rating" v-for="starF in card.vote">
+                    <img :src="recentCourses.starFull" alt="star full">
+                  </span>
+                  <span v-for="starE in (5-card.vote)" v-show="card.vote">
+                    <img :src="recentCourses.starFull" alt="star emptyl">
+                  </span>
+                  <samp class="vote">{{card.vote}}</samp>
+                </div>
+                <!-- /.rating -->
+                <div class="duration_course flex" v-show="!card.vote">
+                  <i class="fal fa-clock"></i><span>{{card.duration}}</span>
+                </div>
+                <!-- /.duration_course flex -->
+
+              </div>
+              <!-- /.left_footer_card -->
+              <div class="right_footer_card flex">
+                <h5 v-if="card.price">{{card.price}}</h5>
+                <h4>{{card.fullPrice}}</h4>
+              </div>
+              <!-- /.right_footer_card -->
+            </div>
+            <!-- /.footer_card -->
+          </div>
+          <!-- /.produce_card -->
+        </div>
+        <!-- /.resuls_box -->
+        <div class="carousel_control flex">
+          <a :class="`arrow_carousel ${(carouselSection.end>recentCourses.courses.length -1)? 'disabled' : 'active'}`"
+            @click="carouselScrollPrev()"><i
+              class="fas fa-angle-left"></i></a>
+          <a :class="`arrow_carousel ${(carouselSection.start > 0)? 'active' : 'disabled'}`"
+            @click="carouselScrollNext()"><i
+              class="fas fa-angle-right"></i></a>
+        </div>
+        <!-- /.carousel_control -->
 
       </section>
       <!-- /.carousel_courses -->
-      <section id="business_box">
-        <div class="business_card">
-          <img src="" alt="">
-          <h2></h2>
-          <h3></h3>
-          <a href=""></a>
+      <section id="business_box" class="flex">
+        <div class="business_card flex" v-for="box in sectionBusinessBox">
+          <img :src="box.img" alt="">
+          <div class="right_card flex">
+            <h2 v-text="box.title"></h2>
+            <h3 v-text="box.subtitle" class="mb_30">
+              </h3>
+            <a  :href="box.link" v-text="box.valueLink"></a>
+          </div>
+          <!-- /.right_card -->
         </div>
         <!-- /.business_card -->
 
       </section>
       <!-- /.business_box -->
-      <section class="testimonial">
+      <section class="testimonial" :style="testimonialSection.primo.bgImg">
         <div class="containe">
           <div class="bubble_wrap">
-            <div class="bubble">
-              <h2>{{}}</h2>
+            <div class="bubble" v-html="testimonialSection.primo.txt">
+              <!-- <h2>{{testimonialSection.primo.txt}}</h2>
               <p></p>
               <h3></h3>
-              <h4></h4>
+              <h4></h4> -->
             </div>
             <!-- /.bubble -->
           </div>
@@ -293,6 +415,8 @@
 
   <!-- Collegamenteo a Vue.js - development version, includes helpful console warnings -->
   <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <!-- Script di collegamento libreria axios -->
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>

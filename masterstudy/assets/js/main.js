@@ -360,6 +360,28 @@ let ms_app = new Vue({
           }
         }
       }
+    },
+    scrollMenu:{
+      desk:{
+        icon:"fal fa-desktop",
+        link:"#ms_header",
+      },
+      help:{
+        icon:"far fa-life-ring",
+        link:"",
+      },
+      tool:{
+        icon:"fal fa-wrench",
+        link:"",
+      },
+      cart:{
+        icon:"fal fa-cart-plus",
+        link:"",
+      },
+      appMobile:{
+        icon:"fal fa-mobile-alt",
+        link:"",
+      }
     }
   }
 });
