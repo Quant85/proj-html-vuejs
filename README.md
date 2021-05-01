@@ -66,7 +66,7 @@ Project - "masterstudy"
 
 ### 1.2 - Main
 
-![Main image](prototyping/Main.png)
+![Main image](/masterstudy/prototyping/Main.png)
 
 Il Main è il corpo del page, pur essendo una macroarea, al suo interno ritroviamo varie sottosezioni:
 
@@ -81,7 +81,7 @@ Il Main è il corpo del page, pur essendo una macroarea, al suo interno ritrovia
 
 #### 1.2.2 Main - "Info Banner"
 
-![Banner](prototyping/Banner.png)
+![Banner](/masterstudy/prototyping/Banner.png)
 
 - **info banner** - ha una struttura simile al **box** presente nel **jumbotron**.
 Due sezioni:
@@ -93,7 +93,7 @@ Due sezioni:
 
 #### 1.2.3 Main - "Showcase Products - Recent Courses"
 
-![Courses](prototyping/Courses.png)
+![Courses](/masterstudy/prototyping/Courses.png)
 
 In questa sezione è presente:
 
@@ -109,14 +109,14 @@ In questa sezione è presente:
 
 #### 1.2.4 Main - "Our Numbers"
 
-![Statistics](prototyping/Statistics.png)
+![Statistics](/masterstudy/prototyping/Statistics.png)
 
 In questa area ritroviamo i "numeri" rilevanti per l'azienda suddivisi in quattro macroaree indicatori.
 Questa sezione di compone di un background-color, un titolo un breve descrittivo e i quattro indicatori, stilizzati in quattro colonne, contenenti ciascuna il valore numerico associato.
 
 #### 1.2.5 Main - "Newsletter"
 
-![Newsletter](prototyping/Newsletter.png)
+![Newsletter](/masterstudy/prototyping/Newsletter.png)
 
 Questa sezione consente la sottoscrizione alla newletter aziendale, per ricevere eventuali offerte, news, ecc.
 La sua struttura può esser identificata in due colonne:
@@ -135,7 +135,7 @@ La sua macrosctruttura è composta di un colore di background che ne identifica 
 
 #### 1.2.7 Main - "Business Box"
 
-![Sectorized Offers](prototyping/Sectorized_offers.png)
+![Sectorized Offers](/masterstudy/prototyping/Sectorized_offers.png)
 
 In questa sezione ritroviamo due **box_card** con la stessa struttura, con un' immagine nella parte sinistra e una descrizione specifica dell'offerta nella parte destra. Nel dettaglio:
 
@@ -145,7 +145,7 @@ In questa sezione ritroviamo due **box_card** con la stessa struttura, con un' i
 
 #### 1.2.8 Main - "Testimonial"
 
-![Testimonial](prototyping/Testimonial.png)
+![Testimonial](/masterstudy/prototyping/Testimonial.png)
 
 Questa sottosezione è dedicata alle testimonianze.
 Essa si articola in :
@@ -158,7 +158,7 @@ Essa si articola in :
 
 ### 1.3 Footer
 
-![Footer image](prototyping/Footer.png)
+![Footer image](/masterstudy/prototyping/Footer.png)
 
 Il Footer è suddiviso in 4 colonne contenenti:
 
